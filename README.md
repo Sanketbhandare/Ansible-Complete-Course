@@ -1,86 +1,129 @@
-# Complete Ansible Zero to Hero Course
-Complete Ansible Zero to Hero Course with Real-Time Examples. Keep Learning!
+# Ansible Zero to Hero Course 
+
+A **Beginner to Advanced Ansible learning path** covering real-world automation, configuration management, application deployment, & so on.
 
 ---
 
 ### Course Requirements:
+
  1. **Laptop (with admin privileges)**
  2. **Desire to Learn**.
 
 ---
 
-## **Module 1: Ansible Basics & Architecture**
-- **Introduction to Ansible**: Automation tool for configuration management, application deployment, and orchestration.
-- **Architecture**: Master (control node) and managed nodes (hosts).
-- **Ansible Components**: Inventory, modules, playbooks, and tasks.
+### 📌 What You’ll Learn
+1. Ansible fundamentals, architecture, and core concepts
+2. Writing clean, reusable, and idempotent playbooks
+3. Managing variables, facts, and conditional logic
+4. Structuring automation with roles and collections
+5. Securing secrets, handling errors, and debugging playbooks
+6. Automating multi-server deployments with dynamic inventories
 
 ---
 
-## **Module 2: Ansible Playbooks & Variables**
-- **Playbooks**: YAML files that define automation tasks.
-- **Variables**: Use variables for dynamic values in playbooks.
-  - Declare and use variables in playbooks.
-  - Facts: Collect system information during execution.
+### 🛠 Tools & Technologies
+- Ansible
+- Virtual Studio Code 
+- Vagrant (used only for local lab setup in projects to create VMs)
+
+---
+## **Episode 1: Ansible Basics & Architecture**
+
+- **Goal:**  Understand Ansible fundamentals and how automation works.
+
+- **Topics**
+    - What is Ansible and why it is used
+    - Agentless architecture
+    - Control node and managed nodes
+    - Inventory basics
+    - Ad-hoc commands
+    - Ansible configuration file
+
+- **📁 Project 1: Basic System Audit Automation**
+   - **Objective:** Validate connectivity, OS, uptime, and disk usage using ad-hoc commands and static inventory
 
 ---
 
-## **Module 3: Ansible Modules & Collections**
-- **Modules**: Core building blocks for tasks (e.g., `yum`, `copy`, `service`).
-- **Collections**: Reusable code packaged together, containing roles, modules, and plugins.
+## Episode 2: Playbooks, Variables & Facts
+
+- **Goal:** Write flexible and reusable automation workflows.
+- **Topics:**
+   - YAML fundamentals
+   - Playbook structure
+   - Tasks and handlers
+   - Variables and variable precedence
+   - Facts and `gather_facts`
+   - Conditionals and loops
+
+- **📁 Project 2: Web Server Deployment**
+   - **Objective:** Install and configure Nginx/Apache using playbooks, variables, and facts
 
 ---
 
-## **Module 4: Ansible Roles, Galaxy & Vault**
-- **Roles**: Organize playbooks into reusable units.
-- **Galaxy**: Download and share roles via Ansible Galaxy.
-- **Vault**: Store sensitive data (passwords, keys) securely in playbooks.
+## Episode 3: Modules, Roles & Collections
+
+- **Goal:** Build scalable and maintainable Ansible code.
+
+- **Topics:**
+   - Common Ansible Episodes
+   - File, package, and service management
+   - Role structure and best practices
+   - Role dependencies
+   - Ansible Galaxy
+   - Collections overview
+
+- **📁 Project 3: Role-Based Web Application Deployment**
+   - **Objective:** Create separate roles for web server & use templates for configuration files  
 
 ---
 
-## **Module 5: Error Handling & Debugging**
-- **Error Handling**: Handle task failures using `ignore_errors`, `when`, and `block`.
-- **Debugging**: Use the `debug` module to print variable values or task output for troubleshooting.
+## Episode 4: Vault, Error Handling & Debugging
+
+- **Goal:** Secure automation and handle failures gracefully.
+
+- **Topics:** 
+   - Ansible Vault concepts
+   - Encrypting and managing secrets
+   - Error handling with ignore_errors
+   - `block`, `rescue`, and `always`
+   - Debug module and verbose execution
+
+- **📁 Project 4: Secure Database Deployment**
+   - **Objective:** Deploy a database using Vault-encrypted credentials and structured error handling
 
 ---
 
-## **Module 6: Dynamic Inventories, CI/CD Integration**
-- **Dynamic Inventories**: Automate host inventory using scripts or cloud plugins (AWS, Azure).
-- **CI/CD Integration**: Automate playbook execution within CI/CD pipelines (e.g., Jenkins, GitLab).
+## Episode 5: Dynamic Inventory
 
+- **Goal**  Integrate Ansible into modern DevOps workflows.
+
+- **Topics**
+   - Static vs dynamic inventories
+   - Inventory scripts and plugins
+   - Cloud inventory concepts
+   - CI/CD fundamentals
+   - Running Ansible from pipelines
+
+- **📁 Project 5: Multi-Host Inventory Automation**
+   - **Objective:** Create a script-based dynamic inventory for local hosts
+  
 ---
 
-## **Module 7: System Management**
-- **Package Management**: Install, update, and remove software (e.g., `apt`, `yum`).
-- **Service Management**: Manage system services (start, stop, restart) using Ansible modules.
+## Episode 6: End-to-End Automation Project
 
----
+- **Goal**
+   - Apply all concepts in a real-world automation scenario.
 
-## **Module 8: End-to-End Project**
-1. **Step 1: Setup Inventory**:
-   - Create static and dynamic inventories for managed hosts.
-2. **Step 2: Write Playbooks**:
-   - Write playbooks for installing a web server (e.g., Nginx or Apache).
-   - Use variables for configuration.
-3. **Step 3: Implement Roles**:
-   - Organize playbooks into roles (e.g., `webserver`, `database`).
-   - Download roles from Ansible Galaxy if necessary.
-4. **Step 4: Use Vault**:
-   - Securely manage sensitive information (e.g., passwords, API keys).
-5. **Step 5: Error Handling & Debugging**:
-   - Handle errors gracefully and use debugging for troubleshooting.
-6. **Step 6: Integrate with CI/CD**:
-   - Integrate playbook execution into a CI/CD pipeline (e.g., Jenkins) to deploy applications automatically.
-7. **Step 7: System Management**:
-   - Automate system setup tasks, including package installation and service management.
-8. **Step 8: Final Testing & Deployment**:
-   - Test the entire setup by executing playbooks and verify the automation pipeline.
+- **Scope**
+   - Web server deployment
+   - Database server setup
+   - Role-based architecture
+   - Secure secrets with Vault
+   - Automated service management
+   - Configuration updates and maintenance
+   - Local virtual machines (e.g., Vagrant) may be used only for testing and practice.
 
----
-
-## **Module 9: Final Project**
-- **Automate Multi-Server Deployment**:
-   - Deploy a multi-tier web application (web server + database).
-   - Use Ansible to automate the deployment process, from configuration to maintenance.
-   - Implement monitoring and logging, manage servers, and automate updates.
-
+- **📁 Project 6: Local Multi-Tier Application Deployment**
+   - **Objective:** Deploy a web server and database across multiple nodes
+ 
 ---
